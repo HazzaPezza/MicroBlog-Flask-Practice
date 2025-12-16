@@ -6,17 +6,23 @@ All pages should inherit this within their template.
 <html>
     <head>
         <!-- Block puts placeholder title in if fails to load one. -->
-      {% if title %}
-      <title>{{ title }} - Microblog</title>
-      {% else %}
-      <title>Welcome to Microblog</title>
-      {% endif %}
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welcome to Microblog</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <div>Microblog:
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('login') }}">Login</a>
-            <a href="{{ url_for('about') }}">About</a>
+        <div class="navbar">
+            <div class="element1">
+                <h1 class="page_title">Microblog</h1>
+            </div>
+            <span class="element2">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('about') }}">About</a>
+            </span>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
