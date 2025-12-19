@@ -21,38 +21,6 @@ def index():
             'author': {'username': 'Harry'},
             'body': "I'm trying to learn Flask rn!"
         },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
-        {
-            'author': {'username': 'Harry'},
-            'body': "I'm trying to learn Flask rn!"
-        },
     ]
 
     # Return a render_template() function that creates the full page with vars
@@ -71,7 +39,8 @@ def login():
     """
     form = LoginForm() # Create new login form using LoginForm() function.
 
-    # If user clicks submit button.
+    # If user clicks submit button redirect them to index.
+    # Create flash message for debugging / potentially UX
     if form.validate_on_submit():
         flash('Login requested for user {}, remember_me={}'.format(
             form.username.data, form.remember_me.data)) # Return to
