@@ -20,7 +20,39 @@ def index():
         {
             'author': {'username': 'Harry'},
             'body': "I'm trying to learn Flask rn!"
-        }
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
+        {
+            'author': {'username': 'Harry'},
+            'body': "I'm trying to learn Flask rn!"
+        },
     ]
 
     # Return a render_template() function that creates the full page with vars

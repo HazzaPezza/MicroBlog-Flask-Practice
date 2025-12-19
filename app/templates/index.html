@@ -1,22 +1,23 @@
 <!-- Inherits everything from base.html template. -->
 {% extends "base.html" %}
 
+<!-- Link any stylesheets for the body -->
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+{% endblock %}
+
 <!-- Template structure requires body content to be placed here. -->
 {% block content %}
-    <!-- Link any stylesheets for the body -->
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
-    </head>
-    <body>
-        <h1>Hi, {{ user.username }}!</h1>
+    <div id="page_content">
+        <h1 class="index-title">Hi, {{ user.username }}!</h1>
 
-        {% for post in posts %}
-        <div>
-            <p>
-                {{ post.author.username }} says: <b>{{ post.body }}</b>
-            </p>
+        <div class="post_list">
+            {% for post in posts %}
+                <p class="posting">
+                    {{ post.author.username }} says: <b>{{ post.body }}</b>
+                </p>
+            {% endfor %}
         </div>
-        {% endfor %}
+    </div>
 
-    </body>
 {% endblock %}

@@ -11,19 +11,27 @@ All pages should inherit this within their template.
         {% else %}
         <title>Welcome to Microblog</title>
         {% endif %}
+       
+        <!-- Styling gets imported here. -->
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        
+        <!-- Block head here allows page specific styling. -->
+        {% block head %}{% endblock %}
     </head>
     <body>
-        <div class="navbar">
-            <div class="element1">
-                <h1 class="page_title">Microblog</h1>
+        <div class="header">
+            <div class="navbar">
+                <div class="element1">
+                    <h1 class="page_title">Microblog</h1>
+                </div>
+                <span class="element2">
+                    <a href="{{ url_for('index') }}">Home</a>
+                    <a href="{{ url_for('login') }}">Login</a>
+                    <a href="{{ url_for('about') }}">About</a>
+                </span>
             </div>
-            <span class="element2">
-                <a href="{{ url_for('index') }}">Home</a>
-                <a href="{{ url_for('login') }}">Login</a>
-                <a href="{{ url_for('about') }}">About</a>
-            </span>
         </div>
+        <div class="pixel-space"></div>
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}

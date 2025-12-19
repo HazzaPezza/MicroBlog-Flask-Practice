@@ -1,0 +1,26 @@
+#page_content {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.index-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: warp;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.posting {
+    padding: 18px 20px;
+    border-radius: 25px;
+    background-color: rgba(128, 128, 128, 0.2);
+    max-width: 200px;
+}

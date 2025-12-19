@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+.header {
+    position: fixed;
+    width: 100%;
+}
+
 .navbar {
     background-color: grey;
     color: white;
@@ -11,4 +16,9 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+}
+
+.pixel-space {
+    height: 70px;
+    width: 100%;
 }
