@@ -8,9 +8,10 @@
 
 <!-- Template structure requires body content to be placed here. -->
 {% block content %}
+    <!-- Having page content in wrapper div helps for margins and formatting. -->
     <div id="page_content">
+        <!-- Takes in username and returns name. Uses Dummy data currently. -->
         <h1 class="index-title">Hi, {{ user.username }}!</h1>
-
         <div class="post_list">
             {% for post in posts %}
                 <p class="posting">

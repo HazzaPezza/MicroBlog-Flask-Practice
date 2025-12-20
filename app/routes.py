@@ -27,10 +27,17 @@ def index():
     # as arguments to the result.
     return render_template('index.html', user=user, title="Home", posts=posts)
 
+
 # Making my own route for an 'about' page that utilises a template made like earlier.
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    """
+    Literally all this does is render about.html. That file extends base.html.
+    There isn't anything fancy about this page it's purely static.
+    """
+    # Render_template() function takes in static file and a title for tab bar.
+    return render_template('about.html', title='About Me')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -45,4 +52,6 @@ def login():
         flash('Login requested for user {}, remember_me={}'.format(
             form.username.data, form.remember_me.data)) # Return to
         return redirect(url_for('index'))
+    
+    # Render login.html with the form loaded in this function.
     return render_template('login.html', title='Sign in', form=form)
